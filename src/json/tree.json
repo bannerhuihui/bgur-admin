@@ -1,0 +1,837 @@
+{
+		"buttonCodes": [
+			"dashboardOverview:add",
+			"dashboardOverview:edit",
+			"dashboardOverview:delete",
+			"dashboardOverview:export",
+			"dashboardReport:add",
+			"dashboardReport:edit",
+			"dashboardReport:delete",
+			"dashboardReport:export",
+			"company:add",
+			"company:edit",
+			"company:delete",
+			"company:export",
+			"companyWechat:add",
+			"companyWechat:edit",
+			"companyWechat:delete",
+			"companyWechat:export",
+			"companySms:add",
+			"companySms:edit",
+			"companySms:delete",
+			"companySms:export",
+			"user:add",
+			"user:edit",
+			"user:delete",
+			"user:export",
+			"userTag:add",
+			"userTag:edit",
+			"userTag:delete",
+			"userTag:export",
+			"userExtend:add",
+			"userExtend:edit",
+			"userExtend:delete",
+			"userExtend:export",
+			"userAddress:add",
+			"userAddress:edit",
+			"userAddress:delete",
+			"userAddress:export",
+			"userIdMapping:add",
+			"userIdMapping:edit",
+			"userIdMapping:delete",
+			"userIdMapping:export",
+			"userPointAccount:add",
+			"userPointAccount:edit",
+			"userPointAccount:delete",
+			"userPointAccount:export",
+			"userPointLog:add",
+			"userPointLog:edit",
+			"userPointLog:delete",
+			"userPointLog:export",
+			"role:add",
+			"role:edit",
+			"role:delete",
+			"role:export",
+			"permission:add",
+			"permission:edit",
+			"permission:delete",
+			"permission:export",
+			"userRole:add",
+			"userRole:edit",
+			"userRole:delete",
+			"userRole:export",
+			"rolePermission:add",
+			"rolePermission:edit",
+			"rolePermission:delete",
+			"rolePermission:export",
+			"product:add",
+			"product:edit",
+			"product:delete",
+			"product:export",
+			"productCategory:add",
+			"productCategory:edit",
+			"productCategory:delete",
+			"productCategory:export",
+			"productVisible:add",
+			"productVisible:edit",
+			"productVisible:delete",
+			"productVisible:export",
+			"productViewLog:add",
+			"productViewLog:edit",
+			"productViewLog:delete",
+			"productViewLog:export",
+			"productViewStat:add",
+			"productViewStat:edit",
+			"productViewStat:delete",
+			"productViewStat:export",
+			"order:add",
+			"order:edit",
+			"order:delete",
+			"order:export",
+			"orderItem:add",
+			"orderItem:edit",
+			"orderItem:delete",
+			"orderItem:export",
+			"orderLogistics:add",
+			"orderLogistics:edit",
+			"orderLogistics:delete",
+			"orderLogistics:export",
+			"promotion:add",
+			"promotion:edit",
+			"promotion:delete",
+			"promotion:export",
+			"promotionProduct:add",
+			"promotionProduct:edit",
+			"promotionProduct:delete",
+			"promotionProduct:export",
+			"contentReview:add",
+			"contentReview:edit",
+			"contentReview:delete",
+			"contentReview:export",
+			"contentMessage:add",
+			"contentMessage:edit",
+			"contentMessage:delete",
+			"contentMessage:export",
+			"systemAuditLog:add",
+			"systemAuditLog:edit",
+			"systemAuditLog:delete",
+			"systemAuditLog:export",
+			"systemVerifyCode:add",
+			"systemVerifyCode:edit",
+			"systemVerifyCode:delete",
+			"systemVerifyCode:export"
+		],
+		"menuTree": [
+			{
+				"id": 1,
+				"name": "首页",
+				"path": "/dashboard",
+				"icon": "House",
+				"sort": 1,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "首页",
+					"icon": "House",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 10,
+						"name": "数据概览",
+						"path": "/dashboard/overview",
+						"icon": "DataBoard",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "数据概览",
+							"icon": "DataBoard",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/dashboard/overview.vue"
+					},
+					{
+						"id": 11,
+						"name": "统计报表",
+						"path": "/dashboard/report",
+						"icon": "PieChart",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "统计报表",
+							"icon": "PieChart",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/dashboard/report.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/dashboard/index.vue"
+			},
+			{
+				"id": 2,
+				"name": "公司管理",
+				"path": "/company",
+				"icon": "OfficeBuilding",
+				"sort": 2,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "公司管理",
+					"icon": "OfficeBuilding",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 12,
+						"name": "公司列表",
+						"path": "/company/list",
+						"icon": "List",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "公司列表",
+							"icon": "List",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/company/list.vue"
+					},
+					{
+						"id": 13,
+						"name": "公众号/小程序",
+						"path": "/company/wechat",
+						"icon": "ChatDotRound",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "公众号/小程序",
+							"icon": "ChatDotRound",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/company/wechat.vue"
+					},
+					{
+						"id": 14,
+						"name": "短信服务商",
+						"path": "/company/sms",
+						"icon": "Message",
+						"sort": 3,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "短信服务商",
+							"icon": "Message",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/company/sms.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/company/index.vue"
+			},
+			{
+				"id": 3,
+				"name": "用户管理",
+				"path": "/user",
+				"icon": "User",
+				"sort": 3,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "用户管理",
+					"icon": "User",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 15,
+						"name": "用户列表",
+						"path": "/user/list",
+						"icon": "UserFilled",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "用户列表",
+							"icon": "UserFilled",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/list.vue"
+					},
+					{
+						"id": 16,
+						"name": "用户标签",
+						"path": "/user/tag",
+						"icon": "Collection",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "用户标签",
+							"icon": "Collection",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/tag.vue"
+					},
+					{
+						"id": 17,
+						"name": "用户扩展",
+						"path": "/user/extend",
+						"icon": "More",
+						"sort": 3,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "用户扩展",
+							"icon": "More",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/extend.vue"
+					},
+					{
+						"id": 18,
+						"name": "用户地址",
+						"path": "/user/address",
+						"icon": "Location",
+						"sort": 4,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "用户地址",
+							"icon": "Location",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/address.vue"
+					},
+					{
+						"id": 19,
+						"name": "ID映射",
+						"path": "/user/id-mapping",
+						"icon": "Link",
+						"sort": 5,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "ID映射",
+							"icon": "Link",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/id-mapping.vue"
+					},
+					{
+						"id": 20,
+						"name": "积分账户",
+						"path": "/user/point-account",
+						"icon": "Coin",
+						"sort": 6,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "积分账户",
+							"icon": "Coin",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/point-account.vue"
+					},
+					{
+						"id": 21,
+						"name": "积分明细",
+						"path": "/user/point-log",
+						"icon": "Tickets",
+						"sort": 7,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "积分明细",
+							"icon": "Tickets",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/user/point-log.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/user/index.vue"
+			},
+			{
+				"id": 4,
+				"name": "角色权限管理",
+				"path": "/auth",
+				"icon": "Lock",
+				"sort": 4,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "角色权限管理",
+					"icon": "Lock",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 22,
+						"name": "角色管理",
+						"path": "/auth/role",
+						"icon": "Avatar",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "角色管理",
+							"icon": "Avatar",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/auth/role.vue"
+					},
+					{
+						"id": 23,
+						"name": "权限管理",
+						"path": "/auth/permission",
+						"icon": "Key",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "权限管理",
+							"icon": "Key",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/auth/permission.vue"
+					},
+					{
+						"id": 24,
+						"name": "用户-角色分配",
+						"path": "/auth/user-role",
+						"icon": "User",
+						"sort": 3,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "用户-角色分配",
+							"icon": "User",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/auth/user-role.vue"
+					},
+					{
+						"id": 25,
+						"name": "角色-权限分配",
+						"path": "/auth/role-permission",
+						"icon": "Connection",
+						"sort": 4,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "角色-权限分配",
+							"icon": "Connection",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/auth/role-permission.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/auth/index.vue"
+			},
+			{
+				"id": 5,
+				"name": "商品管理",
+				"path": "/product",
+				"icon": "Goods",
+				"sort": 5,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "商品管理",
+					"icon": "Goods",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 26,
+						"name": "商品列表",
+						"path": "/product/list",
+						"icon": "List",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品列表",
+							"icon": "List",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/product/list.vue"
+					},
+					{
+						"id": 27,
+						"name": "商品分类",
+						"path": "/product/category",
+						"icon": "Menu",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品分类",
+							"icon": "Menu",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/product/category.vue"
+					},
+					{
+						"id": 28,
+						"name": "商品可见性",
+						"path": "/product/visible",
+						"icon": "View",
+						"sort": 3,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品可见性",
+							"icon": "View",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/product/visible.vue"
+					},
+					{
+						"id": 29,
+						"name": "商品浏览明细",
+						"path": "/product/view-log",
+						"icon": "Document",
+						"sort": 4,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品浏览明细",
+							"icon": "Document",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/product/view-log.vue"
+					},
+					{
+						"id": 30,
+						"name": "商品浏览统计",
+						"path": "/product/view-stat",
+						"icon": "Histogram",
+						"sort": 5,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品浏览统计",
+							"icon": "Histogram",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/product/view-stat.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/product/index.vue"
+			},
+			{
+				"id": 6,
+				"name": "订单管理",
+				"path": "/order",
+				"icon": "DocumentChecked",
+				"sort": 6,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "订单管理",
+					"icon": "DocumentChecked",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 31,
+						"name": "订单列表",
+						"path": "/order/list",
+						"icon": "List",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "订单列表",
+							"icon": "List",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/order/list.vue"
+					},
+					{
+						"id": 32,
+						"name": "订单明细",
+						"path": "/order/item",
+						"icon": "Document",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "订单明细",
+							"icon": "Document",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/order/item.vue"
+					},
+					{
+						"id": 33,
+						"name": "物流管理",
+						"path": "/order/logistics",
+						"icon": "Truck",
+						"sort": 3,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "物流管理",
+							"icon": "Truck",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/order/logistics.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/order/index.vue"
+			},
+			{
+				"id": 7,
+				"name": "营销活动",
+				"path": "/promotion",
+				"icon": "Present",
+				"sort": 7,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "营销活动",
+					"icon": "Present",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 34,
+						"name": "活动列表",
+						"path": "/promotion/list",
+						"icon": "List",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "活动列表",
+							"icon": "List",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/promotion/list.vue"
+					},
+					{
+						"id": 35,
+						"name": "活动-商品关联",
+						"path": "/promotion/product",
+						"icon": "Link",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "活动-商品关联",
+							"icon": "Link",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/promotion/product.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/promotion/index.vue"
+			},
+			{
+				"id": 8,
+				"name": "内容管理",
+				"path": "/content",
+				"icon": "ChatLineRound",
+				"sort": 8,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "内容管理",
+					"icon": "ChatLineRound",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 36,
+						"name": "商品评价",
+						"path": "/content/review",
+						"icon": "Star",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品评价",
+							"icon": "Star",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/content/review.vue"
+					},
+					{
+						"id": 37,
+						"name": "商品留言",
+						"path": "/content/message",
+						"icon": "ChatDotSquare",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "商品留言",
+							"icon": "ChatDotSquare",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/content/message.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/content/index.vue"
+			},
+			{
+				"id": 9,
+				"name": "系统设置",
+				"path": "/system",
+				"icon": "Setting",
+				"sort": 9,
+				"type": "menu",
+				"code": null,
+				"meta": {
+					"title": "系统设置",
+					"icon": "Setting",
+					"breadcrumb": false
+				},
+				"children": [
+					{
+						"id": 38,
+						"name": "操作审计日志",
+						"path": "/system/audit-log",
+						"icon": "Document",
+						"sort": 1,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "操作审计日志",
+							"icon": "Document",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/system/audit-log.vue"
+					},
+					{
+						"id": 39,
+						"name": "验证码记录",
+						"path": "/system/verify-code",
+						"icon": "Tickets",
+						"sort": 2,
+						"type": "menu",
+						"code": null,
+						"meta": {
+							"title": "验证码记录",
+							"icon": "Tickets",
+							"breadcrumb": true
+						},
+						"children": [],
+						"hidden": false,
+						"redirect": null,
+						"component": "views/system/verify-code.vue"
+					}
+				],
+				"hidden": false,
+				"redirect": null,
+				"component": "views/system/index.vue"
+			}
+		]
+}
