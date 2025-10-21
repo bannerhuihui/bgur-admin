@@ -102,18 +102,30 @@ function updateCollapse() {
 onMounted(() => {
   updateCollapse()
   window.addEventListener('resize', updateCollapse)
-  // 初次进入主布局
-  if (route.path === '/') {
-    router.replace('/home').then(() => {
-      // 路由已切换到 /home，明确加入首页标签
-      const current = router.currentRoute.value
-      if (current?.path !== '/') {
-        tabsStore.addOrActivate(current)
+  // 持久化：如果已有持久化的标签，优先恢复激活标签
+  if (tabsStore.tabs.length > 0) {
+    const activeTab = tabsStore.tabs.find(t => t.name === tabsStore.active) || tabsStore.tabs[0]
+    if (activeTab) {
+      // 当前是根路径或与活动标签不一致时，跳转到活动标签的路由
+      if (route.path === '/' || activeTab.path !== route.path) {
+        router.replace(activeTab.path)
       }
-    })
+      tabsStore.setActive(activeTab.name)
+    }
   } else {
-    // 非根路径，直接加入当前路由为标签
-    tabsStore.addOrActivate(route)
+    // 初次进入主布局
+    if (route.path === '/') {
+      router.replace('/home').then(() => {
+        // 路由已切换到 /home，明确加入首页标签
+        const current = router.currentRoute.value
+        if (current?.path !== '/') {
+          tabsStore.addOrActivate(current)
+        }
+      })
+    } else {
+      // 非根路径，直接加入当前路由为标签
+      tabsStore.addOrActivate(route)
+    }
   }
 })
 

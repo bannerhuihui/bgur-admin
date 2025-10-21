@@ -20,19 +20,20 @@
       :xl="8"
       class="login-form-col"
     >
-      <div class="login-form-box">
-        <el-form :model="form" @submit.prevent>
+      <div class="login-form-box" @keydown.enter="handleLogin">
+        <el-form :model="form" @submit.prevent="handleLogin">
+          <input type="submit" style="display:none" />
           <div class="login-title">{{ appConfig.pages.login.subtitle }}</div>
           <div class="divider"></div>
           <div class="login-subtitle">{{ appConfig.pages.login.title }}</div>
           <el-form-item>
-            <el-input v-model="form.username" placeholder="登录名" name="username" prefix-icon="UserFilled" />
+            <el-input v-model="form.username" placeholder="登录名" name="username" prefix-icon="UserFilled" @keyup.enter="handleLogin" />
           </el-form-item>
           <el-form-item>
-            <el-input v-model="form.password" type="password" placeholder="密码" name="password" prefix-icon="Lock" />
+            <el-input v-model="form.password" type="password" placeholder="密码" name="password" prefix-icon="Lock" @keyup.enter="handleLogin" />
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" style="width: 100%" @click="handleLogin">登录</el-button>
+            <el-button type="primary" style="width: 100%" native-type="submit" @click="handleLogin">登录</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -41,7 +42,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { loginApi } from '@/api/login'
 import { setToken, setRefreshToken, setUserInfo } from '@/utils/token'
@@ -51,7 +52,7 @@ import { appConfig } from '@/config/app.js'
 const router = useRouter()
 const userStore = useUserStore() 
 const form = reactive({
-  username: 'superadmin',
+  username: 'superadmin-etf',
   password: '123456'
 })
 
@@ -70,6 +71,29 @@ function handleLogin() {
       console.error('登录失败：', err)
     })
 }
+
+function onGlobalKeydown(e) {
+  if (e.key === 'Enter') {
+    const t = e.target
+    const tag = t && t.tagName ? t.tagName.toUpperCase() : ''
+    const isFormField = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || t?.isContentEditable
+    // 如果事件来源在登录表单容器内，交由局部监听处理，避免重复触发
+    const formBox = document.querySelector('.login-form-box')
+    const isInsideFormBox = formBox ? formBox.contains(t) : false
+    if (!isFormField && !isInsideFormBox) {
+      e.preventDefault()
+      handleLogin()
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onGlobalKeydown)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onGlobalKeydown)
+})
 </script>
 
 <style scoped>

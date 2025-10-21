@@ -4,10 +4,10 @@ import loginBackgroundImg from '@/assets/images/login_index.jpg'
 export const appConfig = {
   // 应用基本信息
   app: {
-    name: 'BGUR',
-    fullName: 'BGUR管理系统',
-    title: 'BGUR Admin - 管理系统',
-    description: 'BGUR后台管理系统'
+    name: 'ETF',
+    fullName: 'ETF后台系统',
+    title: 'ETF - 后台管理系统',
+    description: 'ETF后台管理系统'
   },
   
   // 图片资源配置
@@ -22,17 +22,17 @@ export const appConfig = {
   // 页面标题配置
   pages: {
     login: {
-      title: 'BGUR管理系统',
+      title: 'ETF管理系统',
       subtitle: '欢迎使用'
     },
     main: {
-      logoText: 'BGUR'
+      logoText: 'ETF'
     }
   },
   
   // Footer 配置
   footer: {
-    appName: 'BGUR',
+    appName: 'ETF',
     contactEmail: 'yhui998@163.com'
   }
 }
